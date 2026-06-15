@@ -57,18 +57,6 @@ export default function Dashboard({ username, isKidsMode, setCurrentView }: Dash
                 </p>
               </div>
             </div>
-
-            {isKidsMode && (
-              <div className="shrink-0 relative hidden md:flex items-center justify-center bg-emerald-900/40 p-4 rounded-full border border-emerald-700/50 shadow-inner">
-                <img 
-                  src="https://pub-e68758f43067417dba612b2371819aa1.r2.dev/viktor-components/alien-spaceship.png" 
-                  alt="Spaceship Guard" 
-                  className="w-24 h-24 md:w-28 md:h-28 object-contain animate-pulse hover:scale-110 transition-transform duration-300"
-                  style={{ filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.3))" }}
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            )}
           </div>
 
           <div className="shrink-0 flex sm:flex-row lg:flex-col xl:flex-row gap-2 w-full lg:w-auto">

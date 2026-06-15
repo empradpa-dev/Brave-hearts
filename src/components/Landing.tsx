@@ -59,7 +59,7 @@ export default function Landing({ onLogin, isKidsMode, setIsKidsMode }: LandingP
         <div className="relative overflow-hidden bg-radial-gradient bg-emerald-950 text-white rounded-3xl p-5 border border-emerald-800 shadow-md flex items-center justify-between gap-4 mt-2">
           {/* subtle grid representation */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-yellow-500/10 via-transparent to-transparent"></div>
-          <div className="space-y-1.5 z-10 max-w-[65%]">
+          <div className="space-y-1.5 z-10 w-full">
             <span className="inline-flex items-center gap-1 text-[9px] bg-yellow-400 text-slate-950 font-black tracking-wider uppercase px-2 py-0.5 rounded-full font-mono">
               🚀 Space Safe Zone
             </span>
@@ -67,15 +67,6 @@ export default function Landing({ onLogin, isKidsMode, setIsKidsMode }: LandingP
             <p className="text-[10px] text-emerald-200 leading-normal">
               Brave Hearts is your friendly galactic spaceship. Learn about your body rights, speak with safe signs, and fly securely through safety training games!
             </p>
-          </div>
-          <div className="relative w-24 h-24 flex items-center justify-center shrink-0">
-            <img 
-              src="https://pub-e68758f43067417dba612b2371819aa1.r2.dev/viktor-components/alien-spaceship.png" 
-              alt="Safety Space Ship" 
-              className="w-20 h-20 object-contain animate-bounce"
-              style={{ animationDuration: '3.5s' }}
-              referrerPolicy="no-referrer"
-            />
           </div>
         </div>
 
