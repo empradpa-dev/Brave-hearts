@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Brave Hearts",
+  "description": "Brave Hearts is an accessible child abuse awareness and reporting application with Ugandan Sign Language support designed for the Ntinda School of the Deaf.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
