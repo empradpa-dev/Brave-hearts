@@ -32,42 +32,57 @@ export default function Dashboard({ username, isKidsMode, setCurrentView }: Dash
       {/* Moving Slide / Slider element (Satisfies Figure 9 of the report) */}
       <div className="bg-emerald-800 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-600 via-transparent to-transparent opacity-40"></div>
-        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="space-y-3 md:max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-yellow-400 text-emerald-950 px-3 py-1 rounded-full text-xs font-bold font-mono">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{isKidsMode ? "👋 Hello Safety Hero!" : "🤝 Registered Platform"}</span>
+        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          
+          <div className="flex flex-col md:flex-row items-center gap-6 max-w-4xl">
+            <div className="space-y-3 flex-1">
+              <div className="inline-flex items-center gap-2 bg-yellow-400 text-emerald-950 px-3 py-1 rounded-full text-xs font-bold font-mono">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>{isKidsMode ? "👋 Hello Safety Hero!" : "🤝 Registered Platform"}</span>
+              </div>
+              
+              {/* Slide introduction with motion right to left (simulated by layout entry) */}
+              <div className="animate-slide-left-to-right">
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight leading-none">
+                  {isKidsMode 
+                    ? `Welcome to Brave Hearts, ${username}! 💖` 
+                    : `Discreet Protection Platform Active — Greetings, ${username}! 🤝`
+                  }
+                </h2>
+                <p className="text-xs md:text-sm text-emerald-100 leading-relaxed mt-2.5">
+                  {isKidsMode 
+                    ? "This is your safe house. Here, your voice is heard, your body is respected, and we help you find support when you are scared or hurt. You have the ultimate right of safety!" 
+                    : "Welcome to the Brave Hearts diagnostic and educational workspace. This community prototype, evaluated around Kampala and Ntinda, provides interactive portals to register neglect concerns, sexual/physical abuse indicators under Ugandan statutory guidelines."
+                  }
+                </p>
+              </div>
             </div>
-            
-            {/* Slide introduction with motion right to left (simulated by layout entry) */}
-            <div className="animate-slide-left-to-right">
-              <h2 className="text-2xl md:text-3xl font-black tracking-tight leading-none">
-                {isKidsMode 
-                  ? `Welcome to Brave Hearts, ${username}! 💖` 
-                  : `Discreet Protection Platform Active — Greetings, ${username}! 🤝`
-                }
-              </h2>
-              <p className="text-xs md:text-sm text-emerald-100 leading-relaxed mt-2.5">
-                {isKidsMode 
-                  ? "This is your safe house. Here, your voice is heard, your body is respected, and we help you find support when you are scared or hurt. You have the ultimate right of safety!" 
-                  : "Welcome to the Brave Hearts diagnostic and educational workspace. This community prototype, evaluated around Kampala and Ntinda, provides interactive portals to register neglect concerns, sexual/physical abuse indicators under Ugandan statutory guidelines."
-                }
-              </p>
-            </div>
+
+            {isKidsMode && (
+              <div className="shrink-0 relative hidden md:flex items-center justify-center bg-emerald-900/40 p-4 rounded-full border border-emerald-700/50 shadow-inner">
+                <img 
+                  src="https://pub-e68758f43067417dba612b2371819aa1.r2.dev/viktor-components/alien-spaceship.png" 
+                  alt="Spaceship Guard" 
+                  className="w-24 h-24 md:w-28 md:h-28 object-contain animate-pulse hover:scale-110 transition-transform duration-300"
+                  style={{ filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.3))" }}
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            )}
           </div>
 
-          <div className="shrink-0 flex gap-2">
+          <div className="shrink-0 flex sm:flex-row lg:flex-col xl:flex-row gap-2 w-full lg:w-auto">
             <button
               id="dash-report-btn"
               onClick={() => setCurrentView('report')}
-              className="bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-extrabold text-xs px-5 py-3 rounded-2xl shadow transition-all transform hover:scale-[1.03] cursor-pointer"
+              className="bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-extrabold text-xs px-5 py-3 rounded-2xl shadow transition-all transform hover:scale-[1.03] cursor-pointer w-full text-center"
             >
               📣 Report concern
             </button>
             <button
               id="dash-sign-lang-btn"
               onClick={() => setCurrentView('signLanguage')}
-              className="bg-emerald-950 text-emerald-250 hover:bg-emerald-900 border border-emerald-850 font-bold text-xs px-5 py-3 rounded-2xl transition-all cursor-pointer"
+              className="bg-emerald-950 text-emerald-250 hover:bg-emerald-900 border border-emerald-850 font-bold text-xs px-5 py-3 rounded-2xl transition-all cursor-pointer w-full text-center"
             >
               👋 Sign Language
             </button>

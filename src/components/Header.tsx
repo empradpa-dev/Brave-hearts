@@ -39,25 +39,18 @@ export default function Header({
           {/* Logo and Brand */}
           <div 
             onClick={() => setCurrentView('dashboard')} 
-            className="flex items-center space-x-3 cursor-pointer select-none group"
+            className="flex items-center cursor-pointer select-none group"
             id="header-logo-container"
           >
-            <div className="bg-emerald-600 p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
-              <span className="text-xl font-bold">❤️</span>
-            </div>
-            <div>
-              <h1 className="text-lg font-bold tracking-tight font-sans flex items-center gap-1.5">
+            <div className="flex items-center gap-2">
+              <h1 className="text-base sm:text-lg font-extrabold tracking-tight font-sans flex items-center whitespace-nowrap">
                 Brave Hearts
-                <span className="text-xs font-normal text-emerald-300 hidden sm:inline px-1.5 py-0.5 rounded-full bg-emerald-800">
-                  Feel at Home
-                </span>
               </h1>
-              <p className="text-xs text-emerald-200 hidden xs:block">Child Protection & Safe Space</p>
             </div>
           </div>
 
           {/* Navigation Links */}
-          <nav className="hidden md:flex space-x-1 lg:space-x-2">
+          <nav className="hidden md:flex space-x-0.5 lg:space-x-1.5">
             {[
               { id: 'dashboard', label: '🏠 Home' },
               { id: 'learn', label: '📖 Learn' },
@@ -70,7 +63,7 @@ export default function Header({
                 key={tab.id}
                 id={`tab-btn-${tab.id}`}
                 onClick={() => setCurrentView(tab.id)}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`px-1.5 py-1.5 lg:px-2.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                   currentView === tab.id
                     ? 'bg-emerald-700 text-white shadow-sm'
                     : 'text-emerald-100 hover:bg-emerald-800 hover:text-white'

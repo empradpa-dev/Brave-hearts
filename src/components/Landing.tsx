@@ -38,8 +38,7 @@ export default function Landing({ onLogin, isKidsMode, setIsKidsMode }: LandingP
             <span>Registered Under Kyambogo University</span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="text-5xl select-none" role="img" aria-label="Brave Hearts">❤️</span>
+          <div className="flex items-center flex-wrap gap-4">
             <h1 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 leading-none font-sans">
               Brave Hearts
             </h1>
@@ -55,6 +54,30 @@ export default function Landing({ onLogin, isKidsMode, setIsKidsMode }: LandingP
           <span className="text-slate-800 font-bold"> Ugandan Sign Language</span> accessibility, we bridges the gap for vulnerable children 
           at the Ntinda School of the Deaf.
         </p>
+
+        {/* Safety Starship Banner */}
+        <div className="relative overflow-hidden bg-radial-gradient bg-emerald-950 text-white rounded-3xl p-5 border border-emerald-800 shadow-md flex items-center justify-between gap-4 mt-2">
+          {/* subtle grid representation */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-yellow-500/10 via-transparent to-transparent"></div>
+          <div className="space-y-1.5 z-10 max-w-[65%]">
+            <span className="inline-flex items-center gap-1 text-[9px] bg-yellow-400 text-slate-950 font-black tracking-wider uppercase px-2 py-0.5 rounded-full font-mono">
+              🚀 Space Safe Zone
+            </span>
+            <h3 className="text-sm font-black leading-tight text-white font-sans">Embark on Your Safety Mission!</h3>
+            <p className="text-[10px] text-emerald-200 leading-normal">
+              Brave Hearts is your friendly galactic spaceship. Learn about your body rights, speak with safe signs, and fly securely through safety training games!
+            </p>
+          </div>
+          <div className="relative w-24 h-24 flex items-center justify-center shrink-0">
+            <img 
+              src="https://pub-e68758f43067417dba612b2371819aa1.r2.dev/viktor-components/alien-spaceship.png" 
+              alt="Safety Space Ship" 
+              className="w-20 h-20 object-contain animate-bounce"
+              style={{ animationDuration: '3.5s' }}
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        </div>
 
         {/* Feature Highlights */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
